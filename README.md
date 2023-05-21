@@ -1,3 +1,12 @@
+##### Table of Contents  
+- [Data Loading](#dataLoading)  
+- [FastApi](#fastapi)  
+- [Testing](#testing)  
+   
+
+
+
+<a name="dataLoading"/>
 
 # Data Loading
 
@@ -48,6 +57,10 @@ Here in `ratings` we are storing ratings against each users.<br>
 `_id` is the `user_id`, so that a user cant make duplicate rating.
 
 
+
+
+<a name="fastapi"/>
+
 # FASTAPI codes
   Code is present inside `app` package.<br>
 - `app_driver` is the main file.
@@ -59,6 +72,59 @@ Here in `ratings` we are storing ratings against each users.<br>
 #### Sample urls
 ##### Get Request for problem No 1
 - ```http://127.0.0.1:8000/courses```
+
+```commandline
+[
+  {
+    "name": "Computer Vision Course",
+    "date": "2017-08-11",
+    "description": "Computer Vision has become ubiquitous in our society,............",
+    "domain": [
+        "computer vision",
+        "artificial intelligence"
+    ],
+    "ratings": [
+      {
+        "name": "Image Classification",
+        "rating": 1
+      }
+    ],
+    "rating": 1
+  },
+  {
+    "name": "Highlights of Calculus",
+    "date": "2018-06-28",
+    "description": "Highlights of Calculus is a series of short videos...............................",
+    "domain": [
+        "mathematics"
+    ],
+    "ratings": [],
+    "rating": 0
+  },
+  {
+    "name": "Introduction to Deep Learning",
+    "date": "2022-05-26",
+    "description": "Course lectures for MIT Introduction to Deep Learning.",
+    "domain": [
+        "artificial intelligence"
+    ],
+    "ratings": [],
+    "rating": 0
+  },
+  {
+    "name": "Introduction to Programming",
+    "date": "2022-08-08",
+    "description": "An introduction to programming using a language called Python................................",
+    "domain": [
+        "programming"
+    ],
+    "ratings": [],
+    "rating": 0
+  }
+]
+
+```
+
 ##### Get Request and response for problem No 2
 - ```http://127.0.0.1:8000/course/overview/Introduction%20to%20Programming```
  
@@ -101,6 +167,8 @@ Here in `ratings` we are storing ratings against each users.<br>
 }
 ```
 
+
+<a name="testing"/>
 
 ## Testing
 

@@ -23,6 +23,7 @@ class mongo_db:
         l = []
         for doc in all_courses:
             doc.pop("_id")
+            doc["date"] = str(datetime.fromtimestamp(doc["date"]).date())
             l.append(doc)
         json_string = json.dumps(l)
         return json.loads(json_string)
